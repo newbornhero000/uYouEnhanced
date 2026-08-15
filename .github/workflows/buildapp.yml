@@ -84,6 +84,9 @@ jobs:
         id: SDK
         uses: actions/cache@v4.3.0
         env:
+        ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
+        THEOS: /home/runner/theos
+        EXTRA_FEATS: true
           cache-name: iOS-${{ inputs.sdk_version }}-SDK
         with:
           path: theos/sdks/
