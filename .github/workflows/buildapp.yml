@@ -6,9 +6,11 @@ name: Build and Release uYouEnhanced
 on:
   workflow_dispatch:
     inputs:
+    decrypted_youtube_url:
+    description: "The direct URL to the decrypted YouTube ipa"
       sdk_version:
         description: "iOS SDK Version"
-        default: "17.5"
+        default: ""
         required: true
         type: string
       uyou_version:
